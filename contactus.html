@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+
+:root{
+    --btn-color:#e58f00;
+    --about-sec:#1d1d23;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+    /* text-transform: capitalize; */
+}
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+.header{
+    padding: 1rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: black;
+    opacity: 100%;
+}
+.logo img{
+    width: 60px;
+}
+.navbar a{
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.navbar a:hover{
+    color: var(--btn-color);
+}
+.icons div{
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    display: none;
+}
+.icons div:hover{
+    cursor: pointer;
+}
+
+.icons a{
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: 3px solid orange;
+    border-radius: 10px;
+    font-size: 18px;
+   transition: 0.5s;
+   display: inline-block;
+}
+.icons a:hover{
+    transform: scale(1.1);
+    background: var(--btn-color);
+    border: 3px solid white;
+}
+
+.navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+
+        .contact-section {
+            /* background-color: #333; */
+            color: white;
+            padding: 50px;
+            text-align: center;
+            display: inline;
+            width: 100%;
+            opacity: 100%
+        }
+
+        .contact-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            height: 150px;
+            opacity: 90%;
+        }
+
+        .contact-option {
+            padding: 0;
+            border-radius: 20px;
+            width: 200px;
+            background-color:darksalmon;
+        }
+
+        .contact-option h2 {
+            margin: 0;
+            font-size: 30px;
+            color:black;
+            font-family:cursive, Arial, Helvetica, sans-serif;
+            padding-top: 10px;
+            /* width: 300px; */
+        }
+
+        .contact-option p {
+            font-size:18px;
+            margin: 20px 10px 10px 10px;
+            
+        }
+        
+        
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("websitebackground.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height:150vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity:80%;
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        #form{
+            background-color:darksalmon ;
+            border-radius: 8px;
+            padding: 50px;
+            width: 400;
+            justify-content: center;
+            
+        }
+        input[type="text"],input[type="email"],input[type="number"],select, textarea{
+            width:100%;
+            padding: 10px;
+            border-color:chocolate;
+            border-radius: 30px;
+            opacity: 90%;
+        }
+        textarea[type="text"], select, textarea{
+            opacity: 90%;
+            border-color: chocolate;
+            border-radius: 20px;
+        }
+        input[type="submit"], input[type="reset"]{
+            background-color: orange;
+            color:aliceblue;
+            padding: 10px 20px;
+            margin-right: 20px;
+            border-radius: 15px;
+            border:2px orangered;
+            transition: 2s;
+            opacity: 90%;
+        }
+        input:focus, textarea:focus,select:focus{
+            background-color:orange;
+        }
+        input[type="submit"]:hover,
+        input[type=reset]:hover{
+            background-color:red;
+            transform: scale(1.10);
+            cursor:pointer;opacity: 100%;
+        }
+        h1{
+            text-align: center;
+            font-size: xx-large;
+            font-family:cursive, Georgia, 'Times New Roman', Times, serif;
+        }
+        h2{text-align: center;
+            font-family:cursive, Georgia, 'Times New Roman', Times, serif;}
+        label{
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <header class="header">
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Our Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+    
+            <div class="icons">
+                <div id="menu-bar" class="contact-btn"></div>
+                <a href="login.html">Login...</a>
+            </div>
+            
+        </header>
+
+        <section>
+        <div id="form">
+        <form action="https://api.web3forms.com/submit" method="post">
+            <h1>◉ Contact Us</h1>
+            <h2>Get in touch</h2>
+            <br><br>
+            <input type="hidden" name="access_key" value="9af1ee9b-7270-4ba9-9ef7-cc1b9c38405d">
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Full name" id="name" name="name">
+            <br><br>
+            <label for="email"> Email:</label>
+            <input type="text" placeholder="example@gmail.com" id="email" name="email">
+            <br><br>
+            <label for="mnumber">Mobile Number:</label>
+            <input type="number" placeholder="8292673756" id="mnumber" name="mnumber">
+            <br><br>
+            <label for="comment">Comment:</label>
+            <textarea type="text" placeholder="Happy with your Service..." rows="5" cols="50"></textarea>
+            <br><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
+    </div>
+    <div class="contact-section">
+        <h1>◉ For Reservation</h1>
+        
+        <div class="contact-options">
+            <div class="contact-option">
+                <h2>Visit Us</h2>
+                <p>123-Block, Jalandhar, Punjab, India</p>
+            </div>
+    
+            <div class="contact-option">
+                <h2>Call Us</h2>
+                <p>(+91)8292673756,
+                    (+91)7352281362,
+                </p>
+            </div>
+    
+            <div class="contact-option">
+                <h2>Email Us</h2>
+                <p><a >sudhanshu78158<br>@gmail.com</a></p>
+            </div>
+        </div>
+        </div>
+        </section>
+        
+</body>
+</html>

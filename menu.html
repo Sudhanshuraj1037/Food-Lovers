@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        *{
+        
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+        html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+        .header{
+    padding: 1rem 7%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #1d1d23;
+    top: 0;
+}
+.logo img{
+    width: 60px;
+}
+.navbar a{
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.navbar a:hover{
+    color: var(--btn-color);
+    color: orange;
+}
+.icons div{
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    display: none;
+}
+.icons div:hover{
+    cursor: pointer;
+}
+
+.icons a{
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: 3px solid orange;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+    display: inline-block;
+}
+.icons a:hover{
+    transform: scale(1.1);
+    color: var(--btn-color);
+    background: var(--btn-color);
+    border: 3px solid white;
+    background-color: sandybrown;
+}
+
+.navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #f8f8f8; */
+            background-image: url(websitebackground.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            /* display: flex; */
+        }
+        .ourmenu{
+            max-width: 200px;
+            margin: 100px auto;
+            padding: 20px;
+            /* background-color:rgb(237, 159, 71); */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 90%;
+            border-radius: 20px;
+        }
+        .ourmenu h1{
+            text-align: center;
+            color: white;
+            font-size: 26px;
+            font-family: cursive, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .menu {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: darksalmon;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 80%;
+            border-radius: 20px;
+        }
+        .menu h1 {
+            text-align: center;
+            color: white;
+            font-size: 26px;
+            font-family: cursive, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            height: 150px;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: black;
+            font-size: 24px;
+        }
+        .menu-item span {
+            color:black;
+            font-size: 24px;
+        }
+        .menu-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .order-text-content{
+    padding: 0;
+    margin-left: 168px;
+    margin-top: 30px;
+    align-self: center;
+}
+
+.order-text-content a{
+    color: whitesmoke;
+    padding: 0.6rem 1.5rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+   transition: 0.5s;
+   display: inline-block;
+   background-color: lightsalmon;
+}
+.order-text-content a:hover{
+    transform: scale(1.1);
+    background: var(--btn-color);
+    background-color: darkorange;
+    border: 3px solid white;
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Our Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-bar" class="fas fa-bar"></div>
+            <a href="login.html">Login...</a>
+        </div>
+    </header>
+    <div class="ourmenu" ><h1>◉ Our Menu</h1></div>
+    <div class="menu">
+        <h1>Chinese</h1>
+        <div class="menu-item">
+            <img src="frenchfries.jpg" alt="French Fries">
+            <h2>French Fries</h2>
+            <span>Rs100</span>
+        </div>
+        <div class="menu-item">
+            <img src="crispycorn.jpg" alt="Crispy Corn">
+            <h2>Crispy Corn</h2>
+            <span>Rs100</span>
+        </div>
+        <div class="menu-item">
+            <img src="honeychillypotato.jpg" alt="Honey Chilly Potato">
+            <h2>Honey Chilly Potato</h2>
+            <span>Rs120</span>
+        </div>
+        <div class="menu-item">
+            <img src="vegmenchurian.jpg" alt="Veg Manchurian">
+            <h2>Veg Manchurian</h2>
+            <span>Rs120</span>
+        </div>
+        <div class="menu-item">
+            <img src="vegnoodles.jpg" alt="Veg Noodle">
+            <h2>Veg Noodles</h2>
+            <span>Rs140</span>
+        </div>
+        <div class="menu-item">
+            <img src="hakkanoodles.jpg" alt="Hakka Noodles">
+            <h2>Hakka Noodles</h2>
+            <span>Rs160</span>
+        </div>
+        <div class="menu-item">
+            <img src="vegsteammomos.jpg" alt="VEG Steam Momos">
+            <h2>VEG Steam Momos</h2>
+            <span>Rs50</span>
+        </div>
+        <div class="menu-item">
+            <img src="vegfriedmomos.jpg" alt="VEG Fried Momos">
+            <h2>VEG Fried Momos</h2>
+            <span>Rs80</span>
+        </div></div>
+
+
+    <div class="menu">
+        <h1>Main Course VEG</h1>
+        <div class="menu-item">
+            <img src="paneerdopyaza.jpg" alt="Paneer Do Pyaza">
+            <h2>Paneer Do Pyaza</h2>
+            <span>Rs130</span>
+        </div>
+        <div class="menu-item">
+            <img src="kadhaipaneer.jpg" alt="Kadhai Paneer">
+            <h2>Kadhai Paneer</h2>
+            <span>Rs130</span>
+        </div>
+        <div class="menu-item">
+            <img src="paneerbuttermasala.jpg" alt="Paneer Butter Masala">
+            <h2>Paneer Butter Masala</h2>
+            <span>Rs150</span>
+        </div>
+        <div class="menu-item">
+            <img src="shahipaneer.jpg" alt="Shahi Paneer">
+            <h2>Shahi Paneer</h2>
+            <span>Rs180</span>
+        
+        </div>
+        <div class="menu-item">
+            <img src="mixveg.jpg" alt="Mix Veg">
+            <h2>Mix Veg</h2>
+            <span>Rs100</span>
+        </div></div>
+
+
+    <div class="menu">
+        <h1>NON-VEG</h1>
+        <div class="menu-item">
+            <img src="muttonbiryani.jpg" alt="Mutton Biryani">
+            <h2>Mutton Biryani</h2>
+            <span>Rs200</span>
+        </div>
+        <div class="menu-item">
+            <img src="chickenbiryani.jpg" alt="Chicken Biryani">
+            <h2>Chicken Biryani</h2>
+            <span>Rs140</span>
+        </div>
+        <div class="menu-item">
+            <img src="eggbiryani.jpg" alt="Egg Biryani">
+            <h2>Egg Biryani</h2>
+            <span>Rs120</span>
+        </div>
+        <div class="menu-item">
+            <img src="handichicken.jpg" alt="Handi Chicken">
+            <h2>Handi Chicken</h2>
+            <span>Rs280</span>
+        </div>
+        <div class="menu-item">
+            <img src="fishcurry.jpg" alt="Fish Curry">
+            <h2>Fish Curry</h2>
+            <span>Rs300</span>
+        </div>
+        <div class="menu-item">
+            <img src="muttonmasala.jpg" alt="Mutton Masala">
+            <h2>Mutton Masala</h2>
+            <span>Rs350</span>
+        </div>
+        </div>
+        
+        
+        
+        <div class="menu">
+            <h1>Beverage</h1>
+            <div class="menu-item">
+                <img src="milkshake.jpg" alt="Milk Shake">
+                <h2>Milk Shake</h2>
+                <span>Rs60</span>
+            </div>
+            <div class="menu-item">
+                <img src="oreoshake.jpg" alt="Oreo Shake">
+                <h2>Oreo Shake</h2>
+                <span>Rs80</span>
+            </div>
+            <div class="menu-item">
+                <img src="chocolateshake.jpg" alt="Chocolate Shake">
+                <h2>Chocolate Shake</h2>
+                <span>Rs100</span>
+            </div>
+            <div class="menu-item">
+                <img src="coldcoffee.jpg" alt="Cold Coffee">
+                <h2>Cold Coffee</h2>
+                <span>Rs80</span>
+            </div>
+            <div class="menu-item">
+                <img src="softdrink.jpg" alt="Soft Drink">
+                <h2>Soft Drink</h2>
+                <span>Rs40</span>
+            </div>
+            <div class="order-text-content">
+                <h2><a href="https://forms.gle/EN79CCUo5wEey5Gm8">ORDER YOUR MEAL 😍</a></h2>
+            </div>
+            
+        </div>
+    </div>
+    <br><br>
+    </div>
+</body>
+</html>

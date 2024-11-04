@@ -1,0 +1,208 @@
+
+:root{
+    --btn-color:#e58f00;
+    --about-sec:#1d1d23;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+    /* text-transform: capitalize; */
+}
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+.header{
+    padding: 1rem 7%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: black;
+    opacity: 100%;
+}
+.logo img{
+    width: 60px;
+}
+.navbar a{
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.navbar a:hover{
+    color: var(--btn-color);
+}
+.icons div{
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    display: none;
+}
+.icons div:hover{
+    cursor: pointer;
+}
+
+.icons a{
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: 3px solid orange;
+    border-radius: 10px;
+    font-size: 18px;
+   transition: 0.5s;
+   display: inline-block;
+}
+.icons a:hover{
+    transform: scale(1.1);
+    background: var(--btn-color);
+    border: 3px solid white;
+}
+
+.navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.about{
+    /* padding: 2rem 7%; */
+    padding-top: 80px;
+    background: var(--about-sec);
+    opacity: 95%;
+    height: 900px;
+    margin-top: 0;
+    background-image: url("websitebackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+.about-content{
+    flex: 1 1 45rem;
+}
+.about-inner-content{
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 3rem;
+    
+}
+.about-content .about-inner-content img{
+    width: 80%;
+    margin-left: 100px;
+    border: 7px ridge rgb(255, 255, 255);
+}
+.about-inner-content img:hover{
+    transform: scale(1.1);
+    background: var(--btn-color);
+    border: 9px ridge cornflowerblue;
+}
+.about-text-content{
+    padding: 0 4rem;
+}
+.about-text-content h1{
+    color: black;
+    padding-left: 10px;
+    font-size: 45px;
+    margin-bottom: 15px;
+    font-family: cursive, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.about-text-content p{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 35px;
+    padding-right: 10px;
+}
+.aboutsection{
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            height: auto;
+            width: auto;
+            opacity: 90%;
+}
+.aboutpassion{
+            padding: 0;
+            border-radius: 20px;
+            width: 350px;
+            background-color:darksalmon;
+            background-size: contain;
+            text-align: center;
+            opacity: 95%;
+}
+.aboutpassion h4{
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: cursive, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.aboutpassion p {
+    font-size: 18px;
+    margin: 10px 10px 10px 10px;
+}
+.aboutdedicated{
+            padding: 0;
+            border-radius: 20px;
+            width: 350px;
+            background-color:darksalmon;
+            background-size: contain;
+            text-align: center;
+            padding-right: 0;
+            opacity: 95%;
+}
+.aboutdedicated h4{
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: cursive, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.aboutdedicated p {
+    font-size:18px;
+    margin: 10px 10px 10px 10px;
+}
+/* .home-inner-content{
+    flex: 1 1 45rem; */
+
+.order-text-content{
+    padding: 0;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.order-text-content a{
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+   transition: 0.5s;
+   display: inline-block;
+   background-color:lightsalmon ;
+}
+.order-text-content a:hover{
+    transform: scale(1.1);
+    background: var(--btn-color);
+    border: 3px solid white;
+    color: black;
+    background-color: #e58f00;
+}
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 15px;
+}
